@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMANO Group | Where the City Meets</title>
+  <meta name="description" content="AMANO Group Hotels. Boutique hotels across Berlin and London rooted in the culture, energy and rhythm of their cities.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav nav--transparent nav--on-dark" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">AMANO<span>GROUP</span></a>
+
+      <div class="nav__links">
+        <a href="#stay" class="nav__link">Stay</a>
+        <a href="#eat-drink" class="nav__link">Eat &amp; Drink</a>
+        <a href="#meet" class="nav__link">Meet &amp; Celebrate</a>
+        <a href="#whats-on" class="nav__link">What's On</a>
+      </div>
+
+      <div class="nav__actions">
+        <div>
+          <span class="nav__lang nav__lang--active" data-lang="en">EN</span>
+          <span class="nav__lang-sep">/</span>
+          <span class="nav__lang" data-lang="de">DE</span>
+        </div>
+        <button class="btn-book" id="openBooking">Book Now</button>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="assets/img/DSC04046.jpg" alt="AMANO Hotel lounge with contemporary design and warm lighting">
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="overline hero__tagline">AMANO Group Hotels</p>
+      <h1 class="hero__title">Where the<br>City <em>Meets</em></h1>
+      <p class="hero__subtitle">Boutique hotels rooted in the culture, energy and rhythm of Berlin and London. Not a place to visit. A place to be part of.</p>
+    </div>
+
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== INTRO ========== -->
+  <section class="section section--large">
+    <div class="container container--narrow" style="text-align: center;">
+      <div class="reveal">
+        <p class="overline" style="margin-bottom: var(--space-sm);">Our Philosophy</p>
+        <h2 style="font-size: var(--size-h2); margin-bottom: var(--space-md);">The city is the product.<br>The hotel is the setting.</h2>
+        <p class="editorial-body" style="max-width: 540px; margin: 0 auto;">Every AMANO is shaped by the neighbourhood it lives in. We do not import a formula. We listen to the city, and build a place that belongs there. Start with the city, and we will take you from there.</p>
+        <div class="divider divider--center" style="margin-top: var(--space-md); margin-bottom: 0;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHOOSE YOUR CITY ========== -->
+  <section id="stay">
+    <div class="container">
+      <div class="grid-2 reveal">
+        <!-- Berlin -->
+        <a href="#berlin" class="city-card">
+          <img class="city-card__img" src="assets/img/DSC03986.jpg" alt="AMANO Berlin restaurant interior">
+          <div class="city-card__overlay"></div>
+          <div class="city-card__content">
+            <p class="overline" style="color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;">Explore</p>
+            <h3 class="city-card__name">Berlin</h3>
+            <p class="city-card__count">11 hotels across Mitte, Kreuzberg &amp; beyond</p>
+          </div>
+        </a>
+
+        <!-- London -->
+        <a href="property.html" class="city-card">
+          <img class="city-card__img" src="assets/img/DSC04106.jpg" alt="AMANO Covent Garden lobby">
+          <div class="city-card__overlay"></div>
+          <div class="city-card__content">
+            <p class="overline" style="color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;">Explore</p>
+            <h3 class="city-card__name">London</h3>
+            <p class="city-card__count">Covent Garden</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROPERTIES ========== -->
+  <section class="section section--large">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline section-header__overline">Our Hotels</p>
+        <h2 class="section-header__title">12 hotels. Two cities.<br>One restless spirit.</h2>
+      </div>
+
+      <div class="grid-4 reveal">
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC04101.jpg" alt="Hotel AMANO">
+            <div class="property-card__accent" style="background: var(--amano-bronze);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Mitte</p>
+            <h3 class="property-card__name">Hotel AMANO</h3>
+            <p class="property-card__desc">The original. Rooftop bar, Mani restaurant, and the energy that started it all.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC03975.jpg" alt="AMANO Grand Central">
+            <div class="property-card__accent" style="background: var(--agc-warm-gray);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Mitte</p>
+            <h3 class="property-card__name">AMANO Grand Central</h3>
+            <p class="property-card__desc">Steps from Hauptbahnhof. The city greets you before you have checked in.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC03991.jpg" alt="Hotel Mani">
+            <div class="property-card__accent" style="background: var(--mani-green);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Mitte</p>
+            <h3 class="property-card__name">Hotel Mani</h3>
+            <p class="property-card__desc">The neighbourhood anchor. Israeli-inspired kitchen. Rosenthaler Platz at your door.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC04002.jpg" alt="Hotel Amo">
+            <div class="property-card__accent" style="background: var(--amo-petrol);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Mitte</p>
+            <h3 class="property-card__name">Hotel Amo</h3>
+            <p class="property-card__desc">Dark, moody, deliberate. The bar draws you in. The rooms keep you.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC04081.jpg" alt="Hotel Romy">
+            <div class="property-card__accent" style="background: var(--romy-mustard);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Schoneberg</p>
+            <h3 class="property-card__name">Hotel Romy</h3>
+            <p class="property-card__desc">Named for the icon. Warm tones and a neighbourhood that still surprises.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC04061.jpg" alt="AMANO East Side">
+            <div class="property-card__accent" style="background: var(--east-side-red);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Friedrichshain</p>
+            <h3 class="property-card__name">AMANO East Side</h3>
+            <p class="property-card__desc">River-facing. The grittier, louder side of the city at your feet.</p>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-card__image">
+            <img src="assets/img/DSC04041.jpg" alt="Hotel Zoe">
+            <div class="property-card__accent" style="background: #C4A97D;"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">Berlin, Mitte</p>
+            <h3 class="property-card__name">Hotel Zoe</h3>
+            <p class="property-card__desc">Gold-foil elegance. Refined without taking itself too seriously.</p>
+          </div>
+        </div>
+
+        <a href="property.html" class="property-card" style="text-decoration:none;">
+          <div class="property-card__image">
+            <img src="assets/img/Penelope's bar area.jpg" alt="AMANO Covent Garden">
+            <div class="property-card__accent" style="background: var(--amano-bronze);"></div>
+          </div>
+          <div class="property-card__body">
+            <p class="property-card__city">London, Covent Garden</p>
+            <h3 class="property-card__name">AMANO Covent Garden</h3>
+            <p class="property-card__desc">The London chapter. Berlin spirit, London address.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EAT & DRINK ========== -->
+  <section id="eat-drink">
+    <div class="split reveal">
+      <div class="split__image">
+        <img src="assets/img/Amano Penelope_s Restaurant MattChungPhoto lo-res (50).JPG" alt="Penelope's private dining room with gold chandeliers">
+      </div>
+      <div class="split__content">
+        <p class="overline">Eat &amp; Drink</p>
+        <h2>Not a hotel restaurant.<br>A restaurant that happens to be in a hotel.</h2>
+        <p>From Mani's Israeli-inspired sharing plates in Berlin to Penelope's modern European kitchen in Covent Garden, every AMANO restaurant exists on its own terms.</p>
+        <p>Locals come for the food. Guests discover a city through it.</p>
+        <a href="#" class="cta-link">
+          Explore restaurants &amp; bars
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="split split--reverse reveal">
+      <div class="split__image">
+        <img src="assets/img/Penelope's bar area.jpg" alt="AMANO bar with atmospheric lighting and bar stools">
+      </div>
+      <div class="split__content" style="background: var(--bg-secondary);">
+        <p class="overline">The Bar</p>
+        <h2>The night starts here.<br>It usually ends here too.</h2>
+        <p>AMANO built its reputation at the bar. Before the rooms. Before the restaurants. The bar was the reason people came, and the reason they came back.</p>
+        <p>That has not changed.</p>
+        <a href="#" class="cta-link">
+          See what's pouring
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHAT'S ON ========== -->
+  <section class="section section--large section--dark" id="whats-on">
+    <div class="container">
+      <div class="section-header--center reveal">
+        <p class="overline section-header__overline">What's On</p>
+        <h2 class="section-header__title">The city is always<br>moving. So are we.</h2>
+        <p class="section-header__desc">Pop-ups, collaborations, live music, and the kind of nights that only make sense in person.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <div class="event-card">
+          <div class="event-card__date-row">
+            <p class="event-card__date">28</p>
+            <p class="event-card__month">June 2026</p>
+          </div>
+          <h3 class="event-card__title">Rooftop Sessions: Summer Opening</h3>
+          <p class="event-card__venue">AMANO Rooftop, Berlin Mitte</p>
+          <span class="event-card__tag">Live Music</span>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__date-row">
+            <p class="event-card__date">04</p>
+            <p class="event-card__month">July 2026</p>
+          </div>
+          <h3 class="event-card__title">Mani x Local Heroes: Supper Club</h3>
+          <p class="event-card__venue">Mani Restaurant, Hotel Mani</p>
+          <span class="event-card__tag">Collaboration</span>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card__date-row">
+            <p class="event-card__date">11</p>
+            <p class="event-card__month">July 2026</p>
+          </div>
+          <h3 class="event-card__title">Penelope's Private View</h3>
+          <p class="event-card__venue">Penelope's, AMANO Covent Garden</p>
+          <span class="event-card__tag">Pop-Up</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-lg);" class="reveal">
+        <a href="#" class="btn btn--white">View All Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MEET & CELEBRATE ========== -->
+  <section class="section section--large" id="meet">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline section-header__overline">Meet &amp; Celebrate</p>
+        <h2 class="section-header__title">Daylight. Views.<br>A conference room that does not<br>make you want to fake an emergency.</h2>
+        <p class="section-header__desc">Rooftops, penthouses, private dining rooms and daylight conference spaces across Berlin and London.</p>
+      </div>
+
+      <div class="meet-grid reveal">
+        <div class="meet-feature">
+          <img src="assets/img/Amano Events MattChungPhoto lo-res (167).jpg" alt="AMANO event space with gold chairs and projection screen">
+          <div class="meet-feature__overlay"></div>
+          <div class="meet-feature__content">
+            <p class="overline" style="color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;">Featured Space</p>
+            <h3>The Penthouse, Covent Garden</h3>
+            <p style="font-size: var(--size-small); color: rgba(255,255,255,0.6); margin-top: 0.4rem;">Up to 80 guests. Full AV. A view that closes deals.</p>
+          </div>
+        </div>
+
+        <div class="meet-sidebar">
+          <div class="meet-stat">
+            <p class="meet-stat__number">12+</p>
+            <p class="meet-stat__label">Unique event spaces across two cities</p>
+          </div>
+          <div class="meet-stat">
+            <p class="meet-stat__number">250</p>
+            <p class="meet-stat__label">Maximum standing capacity</p>
+          </div>
+          <div class="meet-stat">
+            <p class="meet-stat__number">5</p>
+            <p class="meet-stat__label">Rooftop terraces for hire</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-lg); text-align: center;" class="reveal">
+        <a href="#" class="btn btn--primary btn--large">Enquire About Your Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section>
+    <div class="gallery-row">
+      <img src="assets/img/Amano Events MattChungPhoto lo-res (209).jpg" alt="AMANO event" style="aspect-ratio: 16/9;">
+      <img src="assets/img/DSC03938.jpg" alt="AMANO breakfast detail" style="aspect-ratio: 1/1;">
+      <img src="assets/img/DSC03925.jpg" alt="AMANO interior" style="aspect-ratio: 1/1;">
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIAL ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonial reveal">
+        <p class="testimonial__quote">"Amano does not feel like a hotel. It feels like someone's very good taste in everything, and they have let you stay."</p>
+        <p class="testimonial__author">Guest review</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIRECT BOOKING ========== -->
+  <section>
+    <div class="perks-strip reveal">
+      <div class="perks-strip__item">
+        <p class="perks-strip__value">10% less</p>
+        <p class="perks-strip__label">than Booking.com</p>
+      </div>
+      <div class="perks-strip__item">
+        <p class="perks-strip__value">Early</p>
+        <p class="perks-strip__label">check-in priority</p>
+      </div>
+      <div class="perks-strip__item">
+        <p class="perks-strip__value">20% off</p>
+        <p class="perks-strip__label">restaurant &amp; bar</p>
+      </div>
+      <div class="perks-strip__item">
+        <p class="perks-strip__value">Flexible</p>
+        <p class="perks-strip__label">cancellation</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-banner">
+    <div class="container">
+      <div class="booking-banner__inner reveal">
+        <div class="booking-banner__text">
+          <h2>Book direct.<br>Skip the middleman.</h2>
+          <p>Every direct booking comes with perks you will not find on any aggregator.</p>
+        </div>
+        <button class="btn btn--white btn--large" id="openBooking2">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__brand-name">AMANO <span style="font-weight:300; opacity:0.4;">GROUP</span></p>
+          <p class="footer__brand-desc">Where the city meets. Boutique hotels across Berlin and London rooted in the culture, energy and rhythm of their cities. Not a chain. A collection of places that belong where they are.</p>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Berlin</p>
+          <ul class="footer__links">
+            <li><a href="#">Hotel AMANO</a></li>
+            <li><a href="#">AMANO Grand Central</a></li>
+            <li><a href="#">Hotel Mani</a></li>
+            <li><a href="#">Hotel Amo</a></li>
+            <li><a href="#">Hotel Romy</a></li>
+            <li><a href="#">Hotel Zoe</a></li>
+            <li><a href="#">AMANO East Side</a></li>
+            <li><a href="#">AMANO Home</a></li>
+            <li><a href="#">Hotel Mio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">London</p>
+          <ul class="footer__links">
+            <li><a href="property.html">AMANO Covent Garden</a></li>
+          </ul>
+          <p class="footer__col-title" style="margin-top: var(--space-md);">Coming 2027</p>
+          <ul class="footer__links">
+            <li><a href="#" style="color: var(--accent-warm);">AMANO Leipzig</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links">
+            <li><a href="#">About AMANO Group</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <p class="footer__col-title" style="margin-top: var(--space-md);">Follow</p>
+          <ul class="footer__links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2026 AMANO Group (R&amp;S Hotelbetriebsges. mbH). All rights reserved.</p>
+        <div class="footer__legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Imprint</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BOOKING MODAL ========== -->
+  <div class="booking-modal" id="bookingModal">
+    <div class="booking-modal__backdrop" id="bookingBackdrop"></div>
+    <div class="booking-modal__content">
+      <button class="booking-modal__close" id="closeBooking">&times;</button>
+
+      <p class="overline" style="margin-bottom: var(--space-xs);">Book Direct</p>
+      <h2 class="booking-modal__title">Reserve Your Stay</h2>
+      <p class="booking-modal__subtitle">Best rate guaranteed. Perks included.</p>
+
+      <form class="booking-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="bookingProperty">Property</label>
+          <select id="bookingProperty">
+            <option value="">Select a hotel</option>
+            <optgroup label="Berlin">
+              <option>Hotel AMANO, Mitte</option>
+              <option>AMANO Grand Central, Mitte</option>
+              <option>Hotel Mani, Mitte</option>
+              <option>Hotel Amo, Mitte</option>
+              <option>Hotel Romy, Schoneberg</option>
+              <option>Hotel Zoe, Mitte</option>
+              <option>AMANO East Side, Friedrichshain</option>
+              <option>AMANO Home, Mitte</option>
+              <option>Hotel Mio, Mitte</option>
+            </optgroup>
+            <optgroup label="London">
+              <option>AMANO Covent Garden</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="booking-form__row">
+          <div class="form-group">
+            <label for="bookingCheckIn">Check-in</label>
+            <input type="date" id="bookingCheckIn">
+          </div>
+          <div class="form-group">
+            <label for="bookingCheckOut">Check-out</label>
+            <input type="date" id="bookingCheckOut">
+          </div>
+        </div>
+
+        <div class="booking-form__row">
+          <div class="form-group">
+            <label for="bookingGuests">Guests</label>
+            <select id="bookingGuests">
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingRooms">Rooms</label>
+            <select id="bookingRooms">
+              <option selected>1 Room</option>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Accessibility</label>
+          <select>
+            <option>No accessibility requirements</option>
+            <option>Wheelchair-accessible room required</option>
+            <option>Mobility-accessible room preferred</option>
+          </select>
+        </div>
+
+        <div class="booking-perks">
+          <div class="booking-perk">
+            <p class="booking-perk__value">10% off</p>
+            <p class="booking-perk__label">vs. Booking.com</p>
+          </div>
+          <div class="booking-perk">
+            <p class="booking-perk__value">Early</p>
+            <p class="booking-perk__label">check-in priority</p>
+          </div>
+          <div class="booking-perk">
+            <p class="booking-perk__value">20% off</p>
+            <p class="booking-perk__label">restaurant &amp; bar</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--large">Check Availability</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
