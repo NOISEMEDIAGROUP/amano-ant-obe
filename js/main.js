@@ -70,11 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
     checkOutInput.value = dayAfter.toISOString().split('T')[0];
   }
 
-  // --- Language Toggle ---
-  let currentLang = 'en';
+  // --- Language Toggle (persists across pages via localStorage) ---
+  let currentLang = localStorage.getItem('amano-lang') || 'en';
 
   function setLanguage(lang) {
     currentLang = lang;
+    localStorage.setItem('amano-lang', lang);
+
     document.querySelectorAll('.nav__lang').forEach(l => l.classList.remove('nav__lang--active'));
     document.querySelectorAll(`.nav__lang[data-lang="${lang}"]`).forEach(l => l.classList.add('nav__lang--active'));
 
@@ -87,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.documentElement.lang = lang;
+  }
+
+  // Apply saved language on page load
+  if (currentLang !== 'en') {
+    setLanguage(currentLang);
   }
 
   document.querySelectorAll('.nav__lang').forEach(lang => {
