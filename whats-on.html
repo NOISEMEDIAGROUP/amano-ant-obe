@@ -15,10 +15,10 @@
       <a href="index.html" class="nav__brand">AMANO<span>GROUP</span></a>
 
       <div class="nav__links">
-        <a href="berlin.html" class="nav__link">Stay</a>
-        <a href="eat-drink.html" class="nav__link">Eat &amp; Drink</a>
-        <a href="meet.html" class="nav__link">Meet &amp; Celebrate</a>
-        <a href="whats-on.html" class="nav__link">What's On</a>
+        <a href="berlin.html" class="nav__link" data-en="Stay" data-de="Aufenthalt">Stay</a>
+        <a href="eat-drink.html" class="nav__link" data-en="Eat &amp; Drink" data-de="Essen &amp; Trinken">Eat &amp; Drink</a>
+        <a href="meet.html" class="nav__link" data-en="Meet &amp; Celebrate" data-de="Tagen &amp; Feiern">Meet &amp; Celebrate</a>
+        <a href="whats-on.html" class="nav__link" data-en="What's On" data-de="Programm">What's On</a>
       </div>
 
       <div class="nav__actions">
@@ -27,7 +27,7 @@
           <span class="nav__lang-sep">/</span>
           <span class="nav__lang" data-lang="de">DE</span>
         </div>
-        <button class="btn-book" id="openBooking">Book Now</button>
+        <button class="btn-book" id="openBooking" data-en="Book Now" data-de="Jetzt buchen">Book Now</button>
       </div>
 
       <button class="nav__toggle" id="navToggle" aria-label="Open menu">
@@ -44,9 +44,9 @@
     <div class="hero__overlay"></div>
 
     <div class="hero__content">
-      <p class="overline hero__tagline">What's On</p>
-      <h1 class="hero__title">The city is always<br>moving. <em>So are we.</em></h1>
-      <p class="hero__subtitle">Pop-ups, collaborations, live music, supper clubs, and the kind of nights that only make sense in person.</p>
+      <p class="overline hero__tagline" data-en="What's On" data-de="Programm">What's On</p>
+      <h1 class="hero__title" data-en-html="The city is always<br>moving. <em>So are we.</em>" data-de-html="Die Stadt bewegt sich immer.<br><em>Wir auch.</em>">The city is always<br>moving. <em>So are we.</em></h1>
+      <p class="hero__subtitle" data-en="Pop-ups, collaborations, live music, supper clubs, and the kind of nights that only make sense in person." data-de="Pop-ups, Kollaborationen, Live-Musik, Supperclubs und die Art von Naechten, die nur persoenlich Sinn ergeben.">Pop-ups, collaborations, live music, supper clubs, and the kind of nights that only make sense in person.</p>
     </div>
 
     <div class="hero__scroll">
@@ -58,12 +58,12 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <div class="filter-tabs reveal" style="display: flex; gap: clamp(1.5rem, 3vw, 2.5rem); border-bottom: 1px solid var(--border-light); padding-bottom: 1rem; flex-wrap: wrap;">
-        <span style="font-size: var(--size-small); font-weight: 500; letter-spacing: 0.06em; color: var(--text-primary); cursor: pointer; border-bottom: 1px solid var(--text-primary); padding-bottom: calc(1rem - 1px); margin-bottom: -1rem;">All</span>
-        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;">Berlin</span>
-        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;">London</span>
-        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;">Pop-Ups</span>
-        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;">Live Music</span>
-        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;">Collaborations</span>
+        <span style="font-size: var(--size-small); font-weight: 500; letter-spacing: 0.06em; color: var(--text-primary); cursor: pointer; border-bottom: 1px solid var(--text-primary); padding-bottom: calc(1rem - 1px); margin-bottom: -1rem;" data-en="All" data-de="Alle">All</span>
+        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;" data-en="Berlin" data-de="Berlin">Berlin</span>
+        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;" data-en="London" data-de="London">London</span>
+        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;" data-en="Pop-Ups" data-de="Pop-Ups">Pop-Ups</span>
+        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;" data-en="Live Music" data-de="Live-Musik">Live Music</span>
+        <span style="font-size: var(--size-small); font-weight: 400; letter-spacing: 0.06em; color: var(--text-muted); cursor: pointer; padding-bottom: calc(1rem - 1px); margin-bottom: -1rem; transition: color 200ms;" data-en="Collaborations" data-de="Kollaborationen">Collaborations</span>
       </div>
     </div>
   </section>
@@ -76,67 +76,67 @@
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">28</p>
-            <p class="event-card__month">June 2026</p>
+            <p class="event-card__month" data-en="June 2026" data-de="Juni 2026">June 2026</p>
           </div>
-          <h3 class="event-card__title">Rooftop Sessions: Summer Opening</h3>
+          <h3 class="event-card__title" data-en="Rooftop Sessions: Summer Opening" data-de="Rooftop Sessions: Sommereroeffnung">Rooftop Sessions: Summer Opening</h3>
           <p class="event-card__venue">AMANO Rooftop, Berlin</p>
-          <span class="event-card__tag">Live Music</span>
+          <span class="event-card__tag" data-en="Live Music" data-de="Live-Musik">Live Music</span>
         </div>
 
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">04</p>
-            <p class="event-card__month">July 2026</p>
+            <p class="event-card__month" data-en="July 2026" data-de="Juli 2026">July 2026</p>
           </div>
-          <h3 class="event-card__title">Mani x Local Heroes: Supper Club</h3>
+          <h3 class="event-card__title" data-en="Mani x Local Heroes: Supper Club" data-de="Mani x Local Heroes: Supperclub">Mani x Local Heroes: Supper Club</h3>
           <p class="event-card__venue">Mani Restaurant, Hotel Mani</p>
-          <span class="event-card__tag">Collaboration</span>
+          <span class="event-card__tag" data-en="Collaboration" data-de="Kollaboration">Collaboration</span>
         </div>
 
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">11</p>
-            <p class="event-card__month">July 2026</p>
+            <p class="event-card__month" data-en="July 2026" data-de="Juli 2026">July 2026</p>
           </div>
-          <h3 class="event-card__title">Penelope's Private View: Summer Exhibition</h3>
+          <h3 class="event-card__title" data-en="Penelope's Private View: Summer Exhibition" data-de="Penelope's Private View: Sommerausstellung">Penelope's Private View: Summer Exhibition</h3>
           <p class="event-card__venue">Penelope's, AMANO Covent Garden</p>
-          <span class="event-card__tag">Art</span>
+          <span class="event-card__tag" data-en="Art" data-de="Kunst">Art</span>
         </div>
 
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">18</p>
-            <p class="event-card__month">July 2026</p>
+            <p class="event-card__month" data-en="July 2026" data-de="Juli 2026">July 2026</p>
           </div>
-          <h3 class="event-card__title">Wine Bar Takeover: South London Cellars</h3>
+          <h3 class="event-card__title" data-en="Wine Bar Takeover: South London Cellars" data-de="Wine Bar Takeover: South London Cellars">Wine Bar Takeover: South London Cellars</h3>
           <p class="event-card__venue">AMANO Wine Bar, London</p>
-          <span class="event-card__tag">Collaboration</span>
+          <span class="event-card__tag" data-en="Collaboration" data-de="Kollaboration">Collaboration</span>
         </div>
 
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">25</p>
-            <p class="event-card__month">July 2026</p>
+            <p class="event-card__month" data-en="July 2026" data-de="Juli 2026">July 2026</p>
           </div>
-          <h3 class="event-card__title">Rooftop Sessions: Jazz &amp; Sunset</h3>
+          <h3 class="event-card__title" data-en="Rooftop Sessions: Jazz &amp; Sunset" data-de="Rooftop Sessions: Jazz &amp; Sonnenuntergang">Rooftop Sessions: Jazz &amp; Sunset</h3>
           <p class="event-card__venue">Rooftop Terrace, AMANO Covent Garden</p>
-          <span class="event-card__tag">Live Music</span>
+          <span class="event-card__tag" data-en="Live Music" data-de="Live-Musik">Live Music</span>
         </div>
 
         <div class="event-card">
           <div class="event-card__date-row">
             <p class="event-card__date">01</p>
-            <p class="event-card__month">August 2026</p>
+            <p class="event-card__month" data-en="August 2026" data-de="August 2026">August 2026</p>
           </div>
-          <h3 class="event-card__title">Dinner &amp; Dance: Summer Series</h3>
+          <h3 class="event-card__title" data-en="Dinner &amp; Dance: Summer Series" data-de="Dinner &amp; Dance: Sommerserie">Dinner &amp; Dance: Summer Series</h3>
           <p class="event-card__venue">Hotel AMANO, Berlin</p>
-          <span class="event-card__tag">Pop-Up</span>
+          <span class="event-card__tag" data-en="Pop-Up" data-de="Pop-Up">Pop-Up</span>
         </div>
 
       </div>
 
       <div style="text-align: center; margin-top: var(--space-lg);" class="reveal">
-        <a href="#" class="btn btn--outline">View More</a>
+        <a href="#" class="btn btn--outline" data-en="View More" data-de="Mehr anzeigen">View More</a>
       </div>
     </div>
   </section>
@@ -145,9 +145,9 @@
   <section class="section section--large section--dark">
     <div class="container">
       <div class="section-header--center reveal">
-        <p class="overline section-header__overline">What You Missed</p>
-        <h2 class="section-header__title">What You Missed</h2>
-        <p class="section-header__desc">Every event creates content. Every collaboration builds credibility. Here is what happened recently.</p>
+        <p class="overline section-header__overline" data-en="What You Missed" data-de="Was Sie verpasst haben">What You Missed</p>
+        <h2 class="section-header__title" data-en="What You Missed" data-de="Was Sie verpasst haben">What You Missed</h2>
+        <p class="section-header__desc" data-en="Every event creates content. Every collaboration builds credibility. Here is what happened recently." data-de="Jedes Event schafft Inhalte. Jede Kollaboration baut Glaubwuerdigkeit auf. Hier ist, was kuerzlich passiert ist.">Every event creates content. Every collaboration builds credibility. Here is what happened recently.</p>
       </div>
 
       <div class="gallery-row reveal" style="margin-top: var(--space-lg);">
@@ -162,16 +162,16 @@
   <section class="section section--large">
     <div class="container container--narrow" style="text-align: center;">
       <div class="reveal">
-        <p class="overline" style="margin-bottom: var(--space-sm);">Stay in the loop</p>
-        <h2 style="font-size: var(--size-h2); margin-bottom: var(--space-md);">First to know.<br>First through the door.</h2>
-        <p class="editorial-body" style="max-width: 480px; margin: 0 auto var(--space-lg);">Sign up for the AMANO events list. Pop-ups, collaborations, and the things that sell out.</p>
+        <p class="overline" style="margin-bottom: var(--space-sm);" data-en="Stay in the loop" data-de="Bleiben Sie informiert">Stay in the loop</p>
+        <h2 style="font-size: var(--size-h2); margin-bottom: var(--space-md);" data-en-html="First to know.<br>First through the door." data-de-html="Zuerst erfahren.<br>Zuerst durch die Tuer.">First to know.<br>First through the door.</h2>
+        <p class="editorial-body" style="max-width: 480px; margin: 0 auto var(--space-lg);" data-en="Sign up for the AMANO events list. Pop-ups, collaborations, and the things that sell out." data-de="Melden Sie sich fuer die AMANO-Eventliste an. Pop-ups, Kollaborationen und die Dinge, die ausverkauft sind.">Sign up for the AMANO events list. Pop-ups, collaborations, and the things that sell out.</p>
 
         <form onsubmit="return false;" style="display: flex; gap: 0; max-width: 480px; margin: 0 auto var(--space-sm); border: 1px solid var(--border-medium);">
           <input type="email" placeholder="Your email address" style="flex: 1; padding: 0.9rem 1.1rem; border: none; background: var(--bg-card); font-family: var(--font-body); font-size: var(--size-body); color: var(--text-primary); outline: none; border-radius: 0; -webkit-appearance: none;">
-          <button type="submit" class="btn btn--primary" style="border: none; white-space: nowrap;">Subscribe</button>
+          <button type="submit" class="btn btn--primary" style="border: none; white-space: nowrap;" data-en="Subscribe" data-de="Anmelden">Subscribe</button>
         </form>
 
-        <p style="font-size: var(--size-small); color: var(--text-muted);">No spam. Just what is happening.</p>
+        <p style="font-size: var(--size-small); color: var(--text-muted);" data-en="No spam. Just what is happening." data-de="Kein Spam. Nur was passiert.">No spam. Just what is happening.</p>
       </div>
     </div>
   </section>
@@ -186,7 +186,7 @@
         </div>
 
         <div>
-          <p class="footer__col-title">Berlin</p>
+          <p class="footer__col-title" data-en="Berlin" data-de="Berlin">Berlin</p>
           <ul class="footer__links">
             <li><a href="#">Hotel AMANO</a></li>
             <li><a href="#">AMANO Grand Central</a></li>
@@ -201,26 +201,26 @@
         </div>
 
         <div>
-          <p class="footer__col-title">London</p>
+          <p class="footer__col-title" data-en="London" data-de="London">London</p>
           <ul class="footer__links">
             <li><a href="property.html">AMANO Covent Garden</a></li>
           </ul>
-          <p class="footer__col-title" style="margin-top: var(--space-md);">Coming 2027</p>
+          <p class="footer__col-title" style="margin-top: var(--space-md);" data-en="Coming 2027" data-de="Ab 2027">Coming 2027</p>
           <ul class="footer__links">
             <li><a href="#" style="color: var(--accent-warm);">AMANO Leipzig</a></li>
           </ul>
         </div>
 
         <div>
-          <p class="footer__col-title">Company</p>
+          <p class="footer__col-title" data-en="Company" data-de="Unternehmen">Company</p>
           <ul class="footer__links">
-            <li><a href="#">About AMANO Group</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-en="About AMANO Group" data-de="Ueber AMANO Group">About AMANO Group</a></li>
+            <li><a href="#" data-en="Careers" data-de="Karriere">Careers</a></li>
+            <li><a href="#" data-en="Press" data-de="Presse">Press</a></li>
+            <li><a href="#" data-en="Sustainability" data-de="Nachhaltigkeit">Sustainability</a></li>
+            <li><a href="#" data-en="Contact" data-de="Kontakt">Contact</a></li>
           </ul>
-          <p class="footer__col-title" style="margin-top: var(--space-md);">Follow</p>
+          <p class="footer__col-title" style="margin-top: var(--space-md);" data-en="Follow" data-de="Folgen">Follow</p>
           <ul class="footer__links">
             <li><a href="#">Instagram</a></li>
             <li><a href="#">LinkedIn</a></li>
@@ -231,10 +231,10 @@
       <div class="footer__bottom">
         <p class="footer__legal">&copy; 2026 AMANO Group (R&amp;S Hotelbetriebsges. mbH). All rights reserved.</p>
         <div class="footer__legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Imprint</a>
-          <a href="#">Cookie Settings</a>
+          <a href="#" data-en="Privacy Policy" data-de="Datenschutz">Privacy Policy</a>
+          <a href="#" data-en="Accessibility" data-de="Barrierefreiheit">Accessibility</a>
+          <a href="#" data-en="Imprint" data-de="Impressum">Imprint</a>
+          <a href="#" data-en="Cookie Settings" data-de="Cookie-Einstellungen">Cookie Settings</a>
         </div>
       </div>
     </div>
@@ -246,9 +246,9 @@
     <div class="booking-modal__content">
       <button class="booking-modal__close" id="closeBooking">&times;</button>
 
-      <p class="overline" style="margin-bottom: var(--space-xs);">Book Direct</p>
-      <h2 class="booking-modal__title">Reserve Your Stay</h2>
-      <p class="booking-modal__subtitle">Best rate guaranteed. Perks included.</p>
+      <p class="overline" style="margin-bottom: var(--space-xs);" data-en="Book Direct" data-de="Direkt buchen">Book Direct</p>
+      <h2 class="booking-modal__title" data-en="Reserve Your Stay" data-de="Reservieren Sie Ihren Aufenthalt">Reserve Your Stay</h2>
+      <p class="booking-modal__subtitle" data-en="Best rate guaranteed. Perks included." data-de="Bestpreis garantiert. Vorteile inklusive.">Best rate guaranteed. Perks included.</p>
 
       <form class="booking-form" onsubmit="return false;">
         <div class="form-group">
@@ -314,20 +314,20 @@
 
         <div class="booking-perks">
           <div class="booking-perk">
-            <p class="booking-perk__value">10% off</p>
-            <p class="booking-perk__label">vs. Booking.com</p>
+            <p class="booking-perk__value" data-en="10% off" data-de="10% weniger">10% off</p>
+            <p class="booking-perk__label" data-en="vs. Booking.com" data-de="als Booking.com">vs. Booking.com</p>
           </div>
           <div class="booking-perk">
-            <p class="booking-perk__value">Early</p>
-            <p class="booking-perk__label">check-in priority</p>
+            <p class="booking-perk__value" data-en="Early" data-de="Frueh">Early</p>
+            <p class="booking-perk__label" data-en="check-in priority" data-de="Check-in Prioritaet">check-in priority</p>
           </div>
           <div class="booking-perk">
-            <p class="booking-perk__value">20% off</p>
-            <p class="booking-perk__label">restaurant &amp; bar</p>
+            <p class="booking-perk__value" data-en="20% off" data-de="20% Rabatt">20% off</p>
+            <p class="booking-perk__label" data-en="restaurant &amp; bar" data-de="Restaurant &amp; Bar">restaurant &amp; bar</p>
           </div>
         </div>
 
-        <button type="submit" class="btn btn--primary btn--large">Check Availability</button>
+        <button type="submit" class="btn btn--primary btn--large" data-en="Check Availability" data-de="Verfuegbarkeit pruefen">Check Availability</button>
       </form>
     </div>
   </div>
