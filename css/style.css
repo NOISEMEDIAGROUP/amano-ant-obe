@@ -989,7 +989,8 @@ h3, h4 {
 }
 
 .form-group select,
-.form-group input {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 0.8rem 0.9rem;
   background: var(--bg-card);
@@ -1003,8 +1004,15 @@ h3, h4 {
   border-radius: 0;
 }
 
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.75;
+}
+
 .form-group select:focus,
-.form-group input:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
 }

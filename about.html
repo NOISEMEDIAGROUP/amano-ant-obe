@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About AMANO Group | Where the City Meets</title>
+  <meta name="description" content="AMANO Group was founded in Berlin in 2009. Twelve hotels across Berlin and London, each shaped by the neighbourhood, the people, and the energy around it.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ========== About Page Specific Styles ========== */
+
+    /* --- About Hero (shorter than homepage, bottom-aligned text) --- */
+    .about-hero {
+      position: relative;
+      height: 75vh;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .about-hero__bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .about-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(26,25,24,0.25) 0%,
+        rgba(26,25,24,0.1) 40%,
+        rgba(26,25,24,0.35) 100%
+      );
+    }
+
+    .about-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding: 0 2rem;
+    }
+
+    .about-hero__title {
+      font-family: var(--font-heading);
+      font-size: var(--size-hero);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: var(--space-md);
+    }
+
+    .about-hero__title em {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .about-hero__subtitle {
+      font-family: var(--font-editorial);
+      font-size: var(--size-body);
+      font-weight: 400;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.65);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .about-hero__tagline {
+      margin-bottom: var(--space-md);
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.4em;
+    }
+
+    .about-hero__scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    /* --- Brand Story (Split) --- */
+    .brand-story .split__content p {
+      max-width: 460px;
+    }
+
+    /* --- Four Pillars --- */
+    .pillars-section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .pillar-card {
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      transition: border-color var(--duration-fast);
+    }
+
+    .pillar-card:hover {
+      border-color: var(--accent);
+    }
+
+    .pillar-card__number {
+      font-family: var(--font-heading);
+      font-size: var(--size-h1);
+      font-weight: 200;
+      color: var(--border-medium);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+
+    .pillar-card__name {
+      font-family: var(--font-heading);
+      font-size: var(--size-h3);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .pillar-card__desc {
+      font-family: var(--font-editorial);
+      font-size: var(--size-small);
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* --- Numbers Section --- */
+    .numbers-section {
+      background: var(--bg-dark);
+      padding: var(--space-xl) 0;
+    }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(1rem, 2vw, 2rem);
+      text-align: center;
+    }
+
+    .number-block__value {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 200;
+      line-height: 1;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
+
+    .number-block__label {
+      font-size: var(--size-small);
+      color: rgba(245,244,240,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    /* --- Local Test (Editorial Quote Block) --- */
+    .local-test {
+      padding: var(--space-2xl) 0;
+    }
+
+    .local-test__inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .local-test__quote {
+      font-family: var(--font-editorial);
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .local-test__body {
+      font-family: var(--font-editorial);
+      font-size: var(--size-body);
+      color: var(--text-secondary);
+      line-height: 1.95;
+      max-width: 520px;
+      margin: 0 auto var(--space-sm);
+    }
+
+    .local-test__body:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* --- Sustainability Split --- */
+    .sustainability .split__content p {
+      max-width: 440px;
+    }
+
+    /* --- Careers CTA --- */
+    .careers-section {
+      padding: var(--space-2xl) 0;
+      text-align: center;
+    }
+
+    .careers-section__inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .careers-section h2 {
+      font-size: var(--size-h2);
+      margin-bottom: var(--space-sm);
+    }
+
+    .careers-section p {
+      font-family: var(--font-editorial);
+      font-size: var(--size-body);
+      color: var(--text-secondary);
+      line-height: 1.95;
+      margin-bottom: var(--space-md);
+    }
+
+    /* --- Leipzig Teaser --- */
+    .leipzig-teaser {
+      background: var(--bg-dark);
+      padding: var(--space-2xl) 0;
+      text-align: center;
+    }
+
+    .leipzig-teaser__inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .leipzig-teaser .overline {
+      color: var(--accent-warm);
+      margin-bottom: 0.75rem;
+    }
+
+    .leipzig-teaser h2 {
+      font-size: var(--size-h1);
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: var(--space-sm);
+    }
+
+    .leipzig-teaser p {
+      font-family: var(--font-editorial);
+      font-size: var(--size-body);
+      color: rgba(245,244,240,0.5);
+      line-height: 1.95;
+      margin-bottom: var(--space-md);
+    }
+
+    /* --- Responsive Overrides for About --- */
+    @media (max-width: 1024px) {
+      .numbers-grid { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+    }
+
+    @media (max-width: 768px) {
+      .numbers-grid { grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+      .about-hero { height: 65vh; min-height: 460px; }
+    }
+
+    @media (max-width: 480px) {
+      .numbers-grid { grid-template-columns: 1fr; gap: var(--space-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav nav--transparent nav--on-dark" id="mainNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">AMANO<span>GROUP</span></a>
+
+      <div class="nav__links">
+        <a href="berlin.html" class="nav__link">Stay</a>
+        <a href="eat-drink.html" class="nav__link">Eat &amp; Drink</a>
+        <a href="meet.html" class="nav__link">Meet &amp; Celebrate</a>
+        <a href="whats-on.html" class="nav__link">What's On</a>
+      </div>
+
+      <div class="nav__actions">
+        <div>
+          <span class="nav__lang nav__lang--active" data-lang="en">EN</span>
+          <span class="nav__lang-sep">/</span>
+          <span class="nav__lang" data-lang="de">DE</span>
+        </div>
+        <button class="btn-book" id="openBooking">Book Now</button>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="about-hero">
+    <div class="about-hero__bg">
+      <img src="assets/img/DSC04046.jpg" alt="AMANO Hotel lounge with warm contemporary design">
+    </div>
+    <div class="about-hero__overlay"></div>
+
+    <div class="about-hero__content">
+      <p class="overline about-hero__tagline">About</p>
+      <h1 class="about-hero__title">Where the<br>City <em>Meets</em></h1>
+      <p class="about-hero__subtitle">We do not build hotels and then look for a city. We find the city and build a place that belongs there.</p>
+    </div>
+
+    <div class="about-hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== BRAND STORY ========== -->
+  <section class="brand-story">
+    <div class="split reveal">
+      <div class="split__image">
+        <img src="assets/img/DSC04106.jpg" alt="AMANO hotel lobby with warm lighting and modern interiors">
+      </div>
+      <div class="split__content">
+        <p class="overline">Our Story</p>
+        <h2>AMANO started in Berlin in 2009 with a simple idea.</h2>
+        <p>A hotel should feel like the city it lives in.</p>
+        <p>We did not start with rooms. We started with a bar. Then a restaurant. Then the kind of nights that made people want to come back -- and eventually, stay.</p>
+        <p>Today there are twelve AMANO hotels across Berlin and London. Each one is shaped by the neighbourhood, the people, and the energy around it. Not a formula. A response.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOUR PILLARS ========== -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="section-header--center reveal">
+        <p class="overline section-header__overline">What We Stand For</p>
+        <h2 class="section-header__title">Four pillars.<br>One direction.</h2>
+      </div>
+
+      <div class="grid-4 reveal">
+        <div class="pillar-card">
+          <p class="pillar-card__number">01</p>
+          <h3 class="pillar-card__name">Community</h3>
+          <p class="pillar-card__desc">Social by nature. Bars, events, pop-ups, and the kind of gatherings that bring people together.</p>
+        </div>
+
+        <div class="pillar-card">
+          <p class="pillar-card__number">02</p>
+          <h3 class="pillar-card__name">Sense of Place</h3>
+          <p class="pillar-card__desc">Each AMANO is rooted in its city. A gateway, not a chain. Design and partnerships that belong where they are.</p>
+        </div>
+
+        <div class="pillar-card">
+          <p class="pillar-card__number">03</p>
+          <h3 class="pillar-card__name">The Stay</h3>
+          <p class="pillar-card__desc">A dependable hotel experience. Great sleep, good service, and the details that matter when you are away from home.</p>
+        </div>
+
+        <div class="pillar-card">
+          <p class="pillar-card__number">04</p>
+          <h3 class="pillar-card__name">Culture</h3>
+          <p class="pillar-card__desc">Plugged into what is current. Collaborations, creators, and a calendar that gives people a reason to walk through the door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NUMBERS ========== -->
+  <section class="numbers-section">
+    <div class="container">
+      <div class="numbers-grid reveal">
+        <div class="number-block">
+          <p class="number-block__value">12</p>
+          <p class="number-block__label">Hotels</p>
+        </div>
+        <div class="number-block">
+          <p class="number-block__value">2</p>
+          <p class="number-block__label">Cities</p>
+        </div>
+        <div class="number-block">
+          <p class="number-block__value">2009</p>
+          <p class="number-block__label">Founded</p>
+        </div>
+        <div class="number-block">
+          <p class="number-block__value">2027</p>
+          <p class="number-block__label">Leipzig</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== THE LOCAL TEST ========== -->
+  <section class="local-test">
+    <div class="container">
+      <div class="local-test__inner reveal">
+        <p class="overline" style="margin-bottom: var(--space-md);">The Local Test</p>
+        <p class="local-test__quote">"Great hotels are not made credible by tourists. They are made credible by the locals."</p>
+        <div class="divider divider--center"></div>
+        <p class="local-test__body">Before we open a bar, host an event, or launch a partnership, we ask three questions: Which pillar does this serve? Does it make locals want to come? Is it a city story, not a hotel ad?</p>
+        <p class="local-test__body">If the answer is no, we rethink.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SUSTAINABILITY ========== -->
+  <section class="sustainability">
+    <div class="split split--reverse reveal">
+      <div class="split__image">
+        <img src="assets/img/DSC03925.jpg" alt="AMANO hotel interior with natural materials and warm tones">
+      </div>
+      <div class="split__content" style="background: var(--bg-secondary);">
+        <p class="overline">Sustainability</p>
+        <h2>Honest steps,<br>not headlines.</h2>
+        <p>AMANO holds Green Key certification across its properties. That means verified standards for energy, water, waste, and responsible sourcing -- audited annually, not self-declared.</p>
+        <p>We are not going to claim we have solved everything. But we are committed to measurable progress: reducing single-use plastics, sourcing locally where we can, and being transparent about where we fall short.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CAREERS CTA ========== -->
+  <section class="careers-section">
+    <div class="container">
+      <div class="careers-section__inner reveal">
+        <p class="overline" style="margin-bottom: 0.75rem;">Careers</p>
+        <h2>Work with us</h2>
+        <p>AMANO is growing. If you care about hospitality, cities, and doing things properly, we would like to hear from you.</p>
+        <a href="#" class="btn btn--primary btn--large">View Open Positions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LEIPZIG 2027 TEASER ========== -->
+  <section class="leipzig-teaser">
+    <div class="container">
+      <div class="leipzig-teaser__inner reveal">
+        <p class="overline">Coming 2027</p>
+        <h2>AMANO Leipzig</h2>
+        <p>A new city. A new chapter. Same restless spirit.</p>
+        <a href="#" class="btn btn--white btn--large">Register Your Interest</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__brand-name">AMANO <span style="font-weight:300; opacity:0.4;">GROUP</span></p>
+          <p class="footer__brand-desc">Where the city meets. Boutique hotels across Berlin and London rooted in the culture, energy and rhythm of their cities. Not a chain. A collection of places that belong where they are.</p>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Berlin</p>
+          <ul class="footer__links">
+            <li><a href="#">Hotel AMANO</a></li>
+            <li><a href="#">AMANO Grand Central</a></li>
+            <li><a href="#">Hotel Mani</a></li>
+            <li><a href="#">Hotel Amo</a></li>
+            <li><a href="#">Hotel Romy</a></li>
+            <li><a href="#">Hotel Zoe</a></li>
+            <li><a href="#">AMANO East Side</a></li>
+            <li><a href="#">AMANO Home</a></li>
+            <li><a href="#">Hotel Mio</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">London</p>
+          <ul class="footer__links">
+            <li><a href="property.html">AMANO Covent Garden</a></li>
+          </ul>
+          <p class="footer__col-title" style="margin-top: var(--space-md);">Coming 2027</p>
+          <ul class="footer__links">
+            <li><a href="#" style="color: var(--accent-warm);">AMANO Leipzig</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Company</p>
+          <ul class="footer__links">
+            <li><a href="about.html">About AMANO Group</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <p class="footer__col-title" style="margin-top: var(--space-md);">Follow</p>
+          <ul class="footer__links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2026 AMANO Group (R&amp;S Hotelbetriebsges. mbH). All rights reserved.</p>
+        <div class="footer__legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Imprint</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BOOKING MODAL ========== -->
+  <div class="booking-modal" id="bookingModal">
+    <div class="booking-modal__backdrop" id="bookingBackdrop"></div>
+    <div class="booking-modal__content">
+      <button class="booking-modal__close" id="closeBooking">&times;</button>
+
+      <p class="overline" style="margin-bottom: var(--space-xs);">Book Direct</p>
+      <h2 class="booking-modal__title">Reserve Your Stay</h2>
+      <p class="booking-modal__subtitle">Best rate guaranteed. Perks included.</p>
+
+      <form class="booking-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="bookingProperty">Property</label>
+          <select id="bookingProperty">
+            <option value="">Select a hotel</option>
+            <optgroup label="Berlin">
+              <option>Hotel AMANO, Mitte</option>
+              <option>AMANO Grand Central, Mitte</option>
+              <option>Hotel Mani, Mitte</option>
+              <option>Hotel Amo, Mitte</option>
+              <option>Hotel Romy, Schoneberg</option>
+              <option>Hotel Zoe, Mitte</option>
+              <option>AMANO East Side, Friedrichshain</option>
+              <option>AMANO Home, Mitte</option>
+              <option>Hotel Mio, Mitte</option>
+            </optgroup>
+            <optgroup label="London">
+              <option>AMANO Covent Garden</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="booking-form__row">
+          <div class="form-group">
+            <label for="bookingCheckIn">Check-in</label>
+            <input type="date" id="bookingCheckIn">
+          </div>
+          <div class="form-group">
+            <label for="bookingCheckOut">Check-out</label>
+            <input type="date" id="bookingCheckOut">
+          </div>
+        </div>
+
+        <div class="booking-form__row">
+          <div class="form-group">
+            <label for="bookingGuests">Guests</label>
+            <select id="bookingGuests">
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingRooms">Rooms</label>
+            <select id="bookingRooms">
+              <option selected>1 Room</option>
+              <option>2 Rooms</option>
+              <option>3 Rooms</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Accessibility</label>
+          <select>
+            <option>No accessibility requirements</option>
+            <option>Wheelchair-accessible room required</option>
+            <option>Mobility-accessible room preferred</option>
+          </select>
+        </div>
+
+        <div class="booking-perks">
+          <div class="booking-perk">
+            <p class="booking-perk__value">10% off</p>
+            <p class="booking-perk__label">vs. Booking.com</p>
+          </div>
+          <div class="booking-perk">
+            <p class="booking-perk__value">Early</p>
+            <p class="booking-perk__label">check-in priority</p>
+          </div>
+          <div class="booking-perk">
+            <p class="booking-perk__value">20% off</p>
+            <p class="booking-perk__label">restaurant &amp; bar</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--large">Check Availability</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
